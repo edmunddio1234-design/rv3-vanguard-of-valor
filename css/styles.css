@@ -348,3 +348,32 @@ figure.media figcaption { font-size: .92rem; color: var(--muted); margin-top: 10
 #glb img { max-width: 94vw; max-height: 90vh; border-radius: 8px; box-shadow: 0 24px 70px rgba(0,0,0,.6); }
 #glb .glb-x { position: absolute; top: 16px; right: 26px; color: #fff; font-size: 38px; line-height: 1; cursor: pointer; font-weight: 300; }
 img[data-glb] { cursor: zoom-in; }
+
+/* === FX pack: consistent motion across the ecosystem === */
+#fx-progress { position: fixed; top: 0; left: 0; height: 3px; width: 0;
+  background: linear-gradient(90deg, var(--gold-500), var(--gold-600)); z-index: 300;
+  border-radius: 0 2px 2px 0; pointer-events: none; }
+.site-header { transition: box-shadow .3s ease; }
+.site-header.fx-scrolled { box-shadow: 0 6px 24px -12px rgba(10,10,30,.35); }
+.fx-reveal { opacity: 0; transform: translateY(18px);
+  transition: opacity .6s ease, transform .6s cubic-bezier(.22,.9,.36,1); }
+.fx-reveal.fx-in { opacity: 1; transform: none; }
+.card:not(.door-card) { position: relative; overflow: hidden; }
+.card:not(.door-card)::before { content: ""; position: absolute; top: 0; left: -80%;
+  width: 55%; height: 100%; transform: skewX(-18deg); pointer-events: none;
+  background: linear-gradient(105deg, transparent 20%, rgba(255,255,255,.4), transparent 80%);
+  transition: left .65s ease; z-index: 1; }
+.card:not(.door-card):hover::before { left: 130%; }
+.card:hover { border-color: var(--gold-500); }
+figure.media img { transition: transform .55s cubic-bezier(.22,.9,.36,1); }
+figure.media:hover img { transform: scale(1.03); }
+.hero-seal { animation: fx-float 6s ease-in-out infinite; }
+@keyframes fx-float { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-8px); } }
+.btn { transition: transform .2s ease, box-shadow .2s ease, background .2s ease, color .2s ease; }
+.btn:hover { transform: translateY(-2px); box-shadow: 0 8px 20px -8px rgba(10,10,30,.45); }
+@media (prefers-reduced-motion: reduce) {
+  .fx-reveal { opacity: 1; transform: none; transition: none; }
+  .hero-seal { animation: none; }
+  .card:not(.door-card)::before { display: none; }
+  figure.media:hover img, .btn:hover { transform: none; }
+}
