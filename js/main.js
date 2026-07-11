@@ -83,3 +83,25 @@
   // ---- Footer year ----
   var y = document.getElementById('year'); if (y) y.textContent = new Date().getFullYear();
 })();
+
+// ---- Click-to-zoom lightbox for [data-glb] images (ported from main-site memorial) ----
+(function () {
+  var els = document.querySelectorAll('[data-glb]');
+  if (!els.length) return;
+  var b = document.createElement('div'); b.id = 'glb'; b.setAttribute('aria-hidden', 'true');
+  b.innerHTML = '<span class="glb-x" aria-label="Close">\u00d7</span><img alt="Enlarged image">';
+  document.body.appendChild(b);
+  var im = b.querySelector('img');
+  els.forEach(function (a) {
+    a.addEventListener('click', function (e) {
+      e.preventDefault();
+      im.src = a.getAttribute('data-img') || a.getAttribute('src');
+      im.alt = a.getAttribute('data-alt') || a.getAttribute('alt') || 'Enlarged image';
+      b.classList.add('open'); b.setAttribute('aria-hidden', 'false');
+    });
+    a.addEventListener('keydown', function (e) { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); a.click(); } });
+  });
+  function close() { b.classList.remove('open'); b.setAttribute('aria-hidden', 'true'); im.src = ''; }
+  b.addEventListener('click', function (e) { if (e.target === b || e.target.classList.contains('glb-x')) close(); });
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape') close(); });
+})();

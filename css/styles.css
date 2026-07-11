@@ -341,3 +341,10 @@ figure.media figcaption { font-size: .92rem; color: var(--muted); margin-top: 10
       transition-duration: .001ms !important; scroll-behavior: auto !important; }
   .hero::before { animation: none; }
 }
+
+/* ---------- Click-to-zoom lightbox (ported from main-site memorial) ---------- */
+#glb { position: fixed; inset: 0; background: rgba(20,12,38,.93); display: none; align-items: center; justify-content: center; z-index: 9999; padding: 24px; cursor: zoom-out; }
+#glb.open { display: flex; }
+#glb img { max-width: 94vw; max-height: 90vh; border-radius: 8px; box-shadow: 0 24px 70px rgba(0,0,0,.6); }
+#glb .glb-x { position: absolute; top: 16px; right: 26px; color: #fff; font-size: 38px; line-height: 1; cursor: pointer; font-weight: 300; }
+img[data-glb] { cursor: zoom-in; }
