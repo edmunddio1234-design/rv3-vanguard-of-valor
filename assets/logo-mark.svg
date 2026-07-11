@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" role="img" aria-label="RV3 Vanguard of Valor shield mark">
+  <!-- RV3 — Rural Veterans Vanguard of Valor Foundation
+       Shield + star + bold V chevron (Vanguard · Valor · V3).
+       Patriot crimson with gold; designed to stay crisp at 44px. -->
+  <defs>
+    <linearGradient id="rv3-shield" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#7A1F33"/>
+      <stop offset="1" stop-color="#4A0E1B"/>
+    </linearGradient>
+  </defs>
+  <!-- Shield body with gold rim -->
+  <path d="M50 3 L92 15 V52 C92 75 74 90 50 98 C26 90 8 75 8 52 V15 Z"
+        fill="url(#rv3-shield)" stroke="#F4B41A" stroke-width="4" stroke-linejoin="round"/>
+  <!-- Gold star of service (top center) -->
+  <path d="M50 14 L54.1 26.2 L67 26.4 L56.7 34.1 L60.4 46.5 L50 39.2 L39.6 46.5 L43.3 34.1 L33 26.4 L45.9 26.2 Z"
+        fill="#F4B41A"/>
+  <!-- Bold V chevron — the vanguard leading the charge -->
+  <path d="M26 46 L38 46 L50 74 L62 46 L74 46 L55 88 L45 88 Z"
+        fill="#FFFFFF"/>
+  <!-- Gold inner chevron accent (echoes rank insignia; suggests the '3') -->
+  <path d="M38 46 L44 46 L50 60 L56 46 L62 46 L50 74 Z"
+        fill="#F4B41A"/>
+</svg>
