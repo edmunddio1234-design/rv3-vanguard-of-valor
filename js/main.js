@@ -42,7 +42,7 @@
       setStatus('', '');
       if (submitBtn) { submitBtn.disabled = true; submitBtn.dataset.label = submitBtn.textContent; submitBtn.textContent = 'Sending…'; }
 
-      fetch('https://www.lighthouseruralcommunities.org/api/submit', { // shared ecosystem CRM — feeds VI-PAR
+      fetch('https://lighthouse-rural-communities.vercel.app/api/submit', { // shared ecosystem CRM — feeds VI-PAR
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(payload)
