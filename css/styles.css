@@ -293,8 +293,9 @@ figure.media figcaption { font-size: .92rem; color: var(--muted); margin-top: 10
 .prose { max-width: 760px; }
 .prose ul { padding-left: 1.2em; }
 .prose li { margin-bottom: .4em; }
-.tiers { display:grid; grid-template-columns:repeat(3,1fr); gap:22px; }
-@media (max-width:800px){ .tiers{ grid-template-columns:1fr; } }
+.tiers { display:grid; grid-template-columns:repeat(4,1fr); gap:18px; align-items:start; }
+@media (max-width:1000px){ .tiers{ grid-template-columns:repeat(2,1fr); } }
+@media (max-width:640px){ .tiers{ grid-template-columns:1fr; } }
 .tier { border:1px solid var(--line); border-radius:var(--radius); padding:26px; background:#fff; box-shadow:var(--shadow); }
 .tier.featured { border:2px solid var(--gold-500); }
 .tier .price { font-size:1.8rem; font-weight:800; color:var(--crimson-700); margin:.2em 0; }
