@@ -63,11 +63,11 @@ Form types on this site: `sponsor` (sponsors.html, contact.html), `funder` (gran
 
 ## Placeholders & domains (mark clearly, swap when live)
 
-- **This site's URL:** `https://rv3-vanguard-of-valor.vercel.app` — placeholder until
+- **This site's URL:** `https://www.rv3vanguardofvalor.org` — placeholder until
   the production domain is purchased. Update `canonical`/`og:url` tags on all 10 pages,
   `sitemap.xml`, and `robots.txt` when the real domain lands.
-- **Sibling placeholders:** `https://eagle-enterprises-consortium.vercel.app` and
-  `https://guardian-angels-enterprises.vercel.app` (footer roll-call + ecosystem page)
+- **Sibling placeholders:** `https://www.eagleenterprisesconsortiuml3c.org` and
+  `https://www.guardianangelsenterprises.org` (footer roll-call + ecosystem page)
   — swap for final domains when those launch. Lighthouse main is live:
   `https://www.lighthouseruralcommunities.org`.
 - **Email `give@rv3vanguardofvalor.org` — TO BE CREATED.** Used as the form fallback

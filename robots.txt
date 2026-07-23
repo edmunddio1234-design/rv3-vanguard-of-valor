@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://rv3-vanguard-of-valor.vercel.app/sitemap.xml
+Sitemap: https://www.rv3vanguardofvalor.org/sitemap.xml
