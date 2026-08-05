@@ -378,3 +378,8 @@ figure.media:hover img { transform: scale(1.03); }
   .card:not(.door-card)::before { display: none; }
   figure.media:hover img, .btn:hover { transform: none; }
 }
+
+/* ---------- Centered video figures ---------- */
+figure.video-centered { float: none; margin: 30px auto 12px; width: 100%; max-width: 960px; text-align: center; }
+figure.video-centered video { width: 100%; height: auto; border-radius: 14px; display: block; }
+figure.video-centered figcaption { text-align: center; }
