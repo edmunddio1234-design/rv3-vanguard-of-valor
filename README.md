@@ -91,4 +91,4 @@ Form types on this site: `sponsor` (sponsors.html, contact.html), `funder` (gran
       memorial currently lives as a page on the Lighthouse main site).
 - [ ] Pilot metrics (312 / 184 / 4 / 8) are labeled "pilot demonstration data"
       throughout — keep the label until audited cohort data replaces them.
-- [ ] Phone (504) 505-1512 is the shared ecosystem line — confirm routing for RV3.
+- [ ] Phone (504) 657-7594 is the shared ecosystem line — confirm routing for RV3.
